@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">$$
+e^{i\pi} + 1 = 0
+$$</script></section><section  data-markdown><script type="text/template">
+<video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+      <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+      <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+      <p>Your user agent does not support the HTML5 Video element.</p>
+    </video></script></section><section  data-markdown><script type="text/template">$$
+E = mc^2
+$$</script></section><section  data-markdown><script type="text/template">![3D_Map_World](./attachments/3D_Map_World.png)</script></section><section  data-markdown><script type="text/template"><style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container">
+
+<div class="col">
+
+## Left column
+- Bullet 1
+- Bullet 2
+- Bullet 3 
+
+</div>
+
+<div class="col">
+
+## Right colum
+1. List
+2. List
+
+</div>
+
+
+</div></script></section><section  data-markdown><script type="text/template"><dl>
+   <dt>小轿车</dt>
+   <dd>一种轻量的可载5个人的小型家用汽车 ... ...</dd>
+   <dt>大卡车</dt>
+   <dd>一种重型的运送货物的汽车 ... ...</dd>
+</dl></script></section><section  data-markdown><script type="text/template">
+<style>
+.example { 
+    color: red; 
+    font-size: 1.5em;
+    }
+</style>
+
+<p id="example">
+世界的奇妙程度远远超越我们的想象，爱因斯坦的理论为我们解开了探索宇宙的新篇章。
+<p/>
+</script></section><section ><section data-markdown><script type="text/template"># Title
+## Sub-title
+
+Here is some content...
+
+<aside class="notes"><p>This will only display in the notes window.</p>
+</aside></script></section><section data-markdown><script type="text/template">123</script></section></section><section  data-markdown><script type="text/template"><style>
+.canvas {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient( blue, red, yellow, red );
+}
+.canvas2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient( blue, red );
+}
+</style>
+
+
+<div class="canvas"></div>
+
+<div class="canvas2"></div>
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
